@@ -5,8 +5,8 @@ metadata:
 spec:
   type: NodePort #type is nodeport
   selector:
-    project: expense
     environment: dev
+    project: expense
     module: frontend
   ports:
     - name: nginx-svc-ports
