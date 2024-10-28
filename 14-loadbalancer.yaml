@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-np
+spec:
+  type: LoadBalancer #type is Loadbalancer
+  selector:
+    environment: dev
+    project: expense
+    module: frontend
+  ports:
+    - name: nginx-svc-ports
+      port: 80
+      protocol: TCP # service port
+      targetPort: 80 # container port
